@@ -1,0 +1,289 @@
+/* The Tomorrow Times - Newspaper Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+Pro:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Colors - Classic newspaper palette */
+  --ink-black: #1a1a1a;
+  --paper-white: #fafaf8;
+  --gray-rule: #d4d4d4;
+  --gray-light: #e8e8e6;
+  --accent-amber: #b8860b;
+  --link-blue: #2563eb;
+  
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Source Serif Pro', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, sans-serif;
+  
+  /* Spacing */
+  --column-gap: 2rem;
+  --section-spacing: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--ink-black);
+  background: var(--paper-white);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Masthead */
+.masthead {
+  text-align: center;
+  border-top: 4px solid var(--ink-black);
+  border-bottom: 4px solid var(--ink-black);
+  padding: 2rem 0 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.masthead-title {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.masthead-date {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #666;
+}
+
+.masthead-tagline {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: #888;
+  margin-top: 0.25rem;
+}
+
+/* Section Headers */
+.section-header {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 2px solid var(--ink-black);
+  padding-bottom: 0.5rem;
+  margin: var(--section-spacing) 0 1.5rem;
+}
+
+/* Article Layouts */
+.article {
+  margin-bottom: 2.5rem;
+}
+
+.article-headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.article-headline-major {
+  font-size: 2.5rem;
+}
+
+.article-headline-secondary {
+  font-size: 2rem;
+}
+
+.article-headline-standard {
+  font-size: 1.5rem;
+}
+
+.article-byline {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.article-lede {
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.article-body {
+  columns: 1;
+  column-gap: var(--column-gap);
+}
+
+.article-body p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Multi-column layouts for major articles */
+@media (min-width: 768px) {
+  .article-body-columns-2 {
+    columns: 2;
+  }
+  
+  .article-body-columns-3 {
+    columns: 3;
+  }
+}
+
+/* Front Page Grid */
+.front-page {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .front-page {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.front-page-lead {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--gray-rule);
+}
+
+.front-page-secondary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Confidence Badge */
+.confidence-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.25rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.confidence-high {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.confidence-medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.confidence-speculative {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Dividers */
+.rule {
+  border: none;
+  border-top: 1px solid var(--gray-rule);
+  margin: 2rem 0;
+}
+
+.rule-thick {
+  border-top: 3px double var(--ink-black);
+}
+
+/* Ticker (short predictions) */
+.ticker {
+  background: var(--gray-light);
+  border-left: 4px solid var(--accent-amber);
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.ticker-title {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.ticker-list {
+  list-style: none;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.ticker-list li::before {
+  content: '▸ ';
+  color: var(--accent-amber);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 3px double var(--ink-black);
+  padding-top: 1.5rem;
+  margin-top: 4rem;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  body {
+    font-size: 16px;
+    padding: 1rem;
+  }
+  
+  .masthead-title {
+    font-size: 2.5rem;
+  }
+  
+  .article-headline-major {
+    font-size: 1.8rem;
+  }
+  
+  .article-headline-secondary {
+    font-size: 1.5rem;
+  }
+  
+  .article-body {
+    columns: 1 !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    max-width: none;
+  }
+  
+  .masthead {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+}

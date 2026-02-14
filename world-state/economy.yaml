@@ -1,0 +1,172 @@
+# Economy - World State Seed (Feb 2026)
+# Source: Real-world estimates and trends as of 2026-02-14
+
+global:
+  gdp_growth: 0.028  # ~2.8% global growth estimate
+  inflation_trend: "moderating"
+  recession_risk: "medium"
+  
+  key_rates:
+    fed_funds: 4.50  # US Federal Reserve
+    ecb_deposit: 3.00  # European Central Bank
+    boe_base: 4.75  # Bank of England
+    
+  inflation_rates:
+    us: 0.028
+    eurozone: 0.024
+    uk: 0.031
+    china: 0.015
+
+markets:
+  indices:
+    sp500:
+      level: 6200  # Estimate based on Feb 2026 trends
+      ytd_change: 0.04
+      trend: "cautiously_bullish"
+      key_drivers: ["AI_earnings", "rate_cut_hopes", "political_uncertainty"]
+    
+    nasdaq:
+      level: 20100
+      ytd_change: 0.06
+      trend: "tech_leading"
+    
+    dow:
+      level: 44500
+      ytd_change: 0.02
+      trend: "mixed"
+    
+    ftse:
+      level: 8600
+      ytd_change: 0.03
+    
+    dax:
+      level: 23200
+      ytd_change: 0.05
+  
+  crypto:
+    bitcoin:
+      price_usd: 98000  # Volatile estimate
+      ytd_change: 0.12
+      trend: "bullish_but_volatile"
+      drivers: ["institutional_adoption", "ETF_inflows", "regulatory_clarity"]
+    
+    ethereum:
+      price_usd: 3400
+      ytd_change: 0.08
+      trend: "following_btc"
+    
+    total_market_cap_trillion: 3.2
+    regulation_status: "evolving"
+
+companies:
+  # Tech Giants
+  - name: "Apple"
+    market_cap_trillion: 3.8
+    trajectory: "stable_growth"
+    key_products: ["iPhone_17", "Vision_Pro_2", "AI_features"]
+    challenges: ["China_market", "regulatory_scrutiny", "innovation_questions"]
+  
+  - name: "Microsoft"
+    market_cap_trillion: 3.5
+    trajectory: "AI_growth_leader"
+    key_products: ["Azure_AI", "Office_365_Copilot", "OpenAI_partnership"]
+    challenges: ["cloud_competition", "antitrust_concerns"]
+  
+  - name: "Alphabet/Google"
+    market_cap_trillion: 2.4
+    trajectory: "AI_race_contender"
+    key_products: ["Gemini_3", "Search_AI", "Cloud", "Waymo"]
+    challenges: ["search_disruption_risk", "antitrust_breakup_speculation"]
+  
+  - name: "Nvidia"
+    market_cap_trillion: 2.8
+    trajectory: "AI_infrastructure_king"
+    key_products: ["H200_chips", "B200_Blackwell", "AI_datacenter"]
+    challenges: ["competition_from_AMD_Intel", "export_controls_China"]
+  
+  - name: "Meta"
+    market_cap_trillion: 1.6
+    trajectory: "AI_and_metaverse"
+    key_products: ["Llama_4", "Reality_Labs", "Instagram", "WhatsApp"]
+  
+  - name: "Amazon"
+    market_cap_trillion: 2.2
+    trajectory: "cloud_and_retail"
+    key_products: ["AWS", "e-commerce", "AI_services"]
+  
+  - name: "Tesla"
+    market_cap_billion: 950
+    trajectory: "volatility_high"
+    key_products: ["EVs", "FSD", "Optimus_robot", "energy"]
+    challenges: ["competition_intensifying", "Musk_distraction", "demand_questions"]
+  
+  # AI Leaders
+  - name: "OpenAI"
+    status: "private_unicorn"
+    valuation_billion: 300
+    latest: "GPT-5.1 released Q4 2025"
+    trajectory: "frontier_leader"
+  
+  - name: "Anthropic"
+    status: "private"
+    valuation_billion: 60
+    latest: "Claude Opus 4.5 Feb 2026"
+    trajectory: "safety_focused_contender"
+  
+  - name: "xAI"
+    status: "private"
+    valuation_billion: 50
+    latest: "Grok 4 development"
+    trajectory: "Musk_backed_challenger"
+
+sectors:
+  technology:
+    trend: "AI_boom_continues"
+    investment_level: "very_high"
+    key_themes: ["generative_AI", "AI_agents", "infrastructure", "regulation"]
+  
+  energy:
+    trend: "transition_accelerating"
+    oil_price_wti: 78
+    renewables_investment: "growing"
+    key_themes: ["solar_dominance", "battery_storage", "grid_modernization"]
+  
+  automotive:
+    trend: "EV_share_growing"
+    ev_market_share: 0.22  # ~22% of new sales globally
+    key_themes: ["Chinese_competition", "charging_infrastructure", "autonomous_progress"]
+  
+  real_estate:
+    trend: "bifurcated"
+    key_themes: ["remote_work_impact", "commercial_distress", "residential_tight"]
+
+trade:
+  - relationship: "US-China"
+    status: "tense"
+    tariffs: "elevated"
+    key_issues: ["tech_decoupling", "Taiwan", "trade_deficit"]
+  
+  - relationship: "US-EU"
+    status: "strained_but_stable"
+    key_issues: ["Trump_tariff_threats", "defense_spending", "digital_taxes"]
+  
+  - relationship: "China-EU"
+    status: "competitive_pragmatism"
+    key_issues: ["EV_competition", "industrial_policy", "Ukraine_stance"]
+
+economic_risks:
+  - type: "geopolitical"
+    description: "Ukraine war escalation, Taiwan crisis"
+    probability: "medium"
+  
+  - type: "monetary_policy"
+    description: "Central bank policy mistakes, sticky inflation"
+    probability: "medium"
+  
+  - type: "debt"
+    description: "Sovereign debt crises, US fiscal sustainability"
+    probability: "low-medium"
+  
+  - type: "financial"
+    description: "Banking stress, market correction"
+    probability: "medium"

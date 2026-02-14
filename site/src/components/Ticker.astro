@@ -1,0 +1,21 @@
+---
+interface TickerItem {
+  text: string;
+}
+
+interface Props {
+  title?: string;
+  items: TickerItem[];
+}
+
+const { title = "The Ticker", items } = Astro.props;
+---
+
+<aside class="ticker">
+  <h3 class="ticker-title">{title}</h3>
+  <ul class="ticker-list">
+    {items.map(item => (
+      <li>{item.text}</li>
+    ))}
+  </ul>
+</aside>

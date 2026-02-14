@@ -1,0 +1,14 @@
+---
+interface Props {
+  date: string;
+  tagline?: string;
+}
+
+const { date, tagline = "Today's news, one year early" } = Astro.props;
+---
+
+<header class="masthead">
+  <h1 class="masthead-title">THE TOMORROW TIMES</h1>
+  <p class="masthead-date">{date}</p>
+  <p class="masthead-tagline">{tagline}</p>
+</header>

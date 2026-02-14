@@ -1,0 +1,238 @@
+# Culture - World State Seed (Feb 2026)
+# Source: Real-world trends and upcoming releases as of 2026-02-14
+
+entertainment:
+  film:
+    upcoming_major_releases:
+      - title: "Avatar 4"
+        studio: "Disney/20th Century"
+        release: "2026-12"
+        hype_level: "very_high"
+      
+      - title: "The Batman Part II"
+        studio: "Warner Bros"
+        release: "2026-10"
+        director: "Matt Reeves"
+      
+      - title: "Mission: Impossible - The Final Reckoning"
+        studio: "Paramount"
+        release: "2026-05"
+        stars: "Tom Cruise"
+      
+      - title: "Fantastic Four"
+        studio: "Marvel/Disney"
+        release: "2026-07"
+        note: "MCU reboot"
+    
+    trends:
+      - "Franchise fatigue debate intensifying"
+      - "Streaming vs theatrical ongoing"
+      - "AI in production (VFX, de-aging, voice)"
+      - "International co-productions growing"
+  
+  television:
+    streaming:
+      landscape: "consolidation_phase"
+      major_players:
+        - name: "Netflix"
+          subscribers_million: 280
+          strategy: "global_content_investment"
+        - name: "Disney+"
+          subscribers_million: 165
+          strategy: "franchise_leverage"
+        - name: "Max"
+          subscribers_million: 105
+          note: "HBO Max + Discovery merger"
+        - name: "Amazon Prime Video"
+          subscribers_million: 220
+          strategy: "bundled_with_Prime"
+      
+      trends:
+        - "Password sharing crackdowns"
+        - "Ad-tier growth"
+        - "Cancelation rate increasing (subscription fatigue)"
+    
+    notable_shows:
+      - "The Last of Us Season 2"
+      - "House of the Dragon Season 3"
+      - "Severance Season 3"
+      - "The Bear ongoing"
+  
+  music:
+    trends:
+      - "AI-generated music explosion"
+      - "TikTok-driven hit creation"
+      - "Vinyl resurgence continuing"
+      - "Live concert demand strong (post-pandemic bounce)"
+    
+    hot_artists:
+      - "Taylor Swift (Eras Tour concluded 2024, still dominant)"
+      - "Sabrina Carpenter (breakthrough 2024-2025)"
+      - "Chappell Roan (rising star)"
+      - "Billie Eilish (new album cycle)"
+    
+    controversies:
+      - "AI voice cloning ethical debates"
+      - "Streaming royalty fights"
+      - "Ticketmaster monopoly scrutiny"
+  
+  gaming:
+    major_releases_2026:
+      - "Grand Theft Auto VI (expected late 2026/early 2027)"
+      - "The Elder Scrolls VI (development continuing)"
+      - "Nintendo Switch 2 titles"
+    
+    platforms:
+      - name: "PlayStation 5"
+        status: "mature_in_lifecycle"
+      - name: "Xbox Series X/S"
+        status: "Game Pass strategy"
+      - name: "Nintendo Switch 2"
+        status: "rumored_2026_launch"
+      - name: "PC"
+        status: "strong_via_Steam"
+    
+    trends:
+      - "Live service games dominating revenue"
+      - "Cloud gaming struggling for adoption"
+      - "Indie game renaissance"
+      - "VR gaming niche but growing (PSVR2, Meta Quest)"
+
+sports:
+  nfl:
+    season: "2025-2026"
+    super_bowl_60: "Feb 8, 2026"
+    status: "playoffs_underway"
+  
+  nba:
+    season: "2025-2026"
+    status: "mid_season"
+    stars: ["LeBron still playing at 41", "Wembanyama sophomore", "new generation rising"]
+  
+  soccer:
+    upcoming: "FIFA World Cup 2026 (US, Canada, Mexico) - June/July"
+    major_leagues:
+      - "Premier League ongoing"
+      - "Champions League knockout phase"
+      - "Saudi Pro League recruiting stars"
+  
+  tennis:
+    era: "post_Big_Three_transition"
+    rising_stars: ["Alcaraz", "Sinner", "Swiatek", "Gauff"]
+  
+  olympics:
+    next: "Milano Cortina 2026 Winter Olympics (Feb 6-22)"
+    status: "currently_happening"
+  
+  trends:
+    - "Women's sports viewership surging"
+    - "Sportswashing debates (Saudi, UAE investments)"
+    - "Athlete mental health awareness"
+    - "NIL deals in college sports (US)"
+
+social:
+  movements:
+    - name: "Climate activism"
+      status: "sustained"
+      recent: "protests against fossil fuel expansion"
+    
+    - name: "AI safety advocacy"
+      status: "growing"
+      concerns: ["existential_risk", "job_displacement", "bias"]
+    
+    - name: "DEI backlash (US)"
+      status: "intensifying_under_Trump"
+      development: "corporate_rollbacks_beginning"
+    
+    - name: "Digital privacy"
+      status: "ongoing"
+      focus: ["data_collection", "surveillance", "encryption"]
+  
+  viral_topics:
+    - "AI slop content flooding internet"
+    - "Deepfake celebrities and politicians"
+    - "BookTok driving publishing"
+    - "Financial influencers and scams"
+    - "Longevity and biohacking trends"
+  
+  generational_discourse:
+    gen_z:
+      characteristics: ["digital_native", "mental_health_aware", "climate_anxious"]
+      media_consumption: "TikTok, YouTube, streaming"
+      politics: "progressive_on_social_issues"
+    
+    gen_alpha:
+      characteristics: ["iPad_kids", "AI_native"]
+      concerns: ["screen_time_impact", "social_skills_development"]
+    
+    millennials:
+      status: "aging_into_middle_age"
+      concerns: ["housing_affordability", "family_formation_delays"]
+    
+    boomers:
+      status: "retiring_en_masse"
+      impact: ["labor_shortage", "healthcare_demand"]
+
+demographics:
+  global_population: 8.1_billion
+  
+  trends:
+    - name: "Global South population growth"
+      regions: ["Africa", "South_Asia"]
+    
+    - name: "Developed world aging"
+      regions: ["Japan", "Europe", "South_Korea"]
+      challenges: ["labor_shortages", "pension_sustainability"]
+    
+    - name: "Urbanization"
+      status: "accelerating"
+      megacities_growing: ["Lagos", "Dhaka", "Manila"]
+    
+    - name: "Migration pressures"
+      drivers: ["climate", "conflict", "economic_opportunity"]
+      flashpoints: ["US_southern_border", "Mediterranean", "Bangladesh_to_India"]
+  
+  us_specific:
+    polarization: "extreme"
+    coastal_vs_inland_divide: "widening"
+    religious_affiliation_declining: true
+    fertility_rate: 1.6
+    life_expectancy: 77.5  # stagnant/declining slightly
+
+publishing:
+  trends:
+    - "BookTok influence massive"
+    - "Romantasy genre explosion"
+    - "AI ghostwriting concerns"
+    - "Independent publishing via Amazon KDP"
+  
+  bestsellers_pattern:
+    - "Celebrity memoirs"
+    - "Self-help and productivity"
+    - "Fantasy (Sanderson, Maas, etc.)"
+    - "Literary fiction struggling commercially"
+
+fashion:
+  trends:
+    - "Sustainable fashion movement"
+    - "Vintage and thrifting mainstream"
+    - "Gender-neutral clothing"
+    - "Tech wearables integration"
+    - "Fast fashion backlash (but still dominant)"
+  
+  luxury_market:
+    status: "bifurcated"
+    ultra_high_end: "strong"
+    aspirational_mid: "struggling"
+
+food:
+  trends:
+    - "GLP-1 drugs (Ozempic, Wegovy) reshaping food industry"
+    - "Plant-based plateau (not growing as predicted)"
+    - "Protein focus (high-protein everything)"
+    - "Social media-driven viral foods"
+    - "Food inflation concerns easing but prices remain high"
+  
+  restaurant_industry:
+    status: "post_pandemic_stabilization"
+    challenges: ["labor_costs", "ghost_kitchens", "delivery_apps_taking_cuts"]

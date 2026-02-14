@@ -1,0 +1,20 @@
+# Meta - Simulation Metadata
+# The Tomorrow Times - World State
+
+current_date: "2027-02-14"  # The simulated future date (1 year from seed)
+simulation_day: 0            # Days since simulation started (will increment daily)
+seed_date: "2026-02-14"     # When simulation was initialized with real-world data
+version: "1.0.0"
+
+# Simulation parameters
+consistency_checks_enabled: true
+probabilistic_events_enabled: true
+cascade_effects_enabled: true
+
+# Daily generation quotas
+daily_event_target: 12       # Target events per day (8-15 range)
+daily_article_target: 8      # Target articles per edition
+
+# Quality thresholds
+min_confidence_for_front_page: 0.6
+editorial_approval_required: true

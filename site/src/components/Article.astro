@@ -1,0 +1,43 @@
+---
+interface Props {
+  headline: string;
+  byline: string;
+  size?: 'major' | 'secondary' | 'standard';
+  confidence?: 'high' | 'medium' | 'speculative';
+  columns?: 1 | 2 | 3;
+}
+
+const { 
+  headline, 
+  byline, 
+  size = 'standard',
+  confidence,
+  columns = 1
+} = Astro.props;
+
+const headlineClass = `article-headline article-headline-${size}`;
+const bodyClass = columns > 1 ? `article-body article-body-columns-${columns}` : 'article-body';
+
+const confidenceLabels = {
+  high: 'High Confidence',
+  medium: 'Medium Confidence',
+  speculative: 'Speculative'
+};
+---
+
+<article class="article">
+  <h2 class={headlineClass}>
+    {headline}
+    {confidence && (
+      <span class={`confidence-badge confidence-${confidence}`}>
+        {confidenceLabels[confidence]}
+      </span>
+    )}
+  </h2>
+  
+  <p class="article-byline">By {byline}</p>
+  
+  <div class={bodyClass}>
+    <slot />
+  </div>
+</article>

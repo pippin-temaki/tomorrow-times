@@ -1,0 +1,32 @@
+---
+import '../styles/newspaper.css';
+
+interface Props {
+  title: string;
+  date: string;
+}
+
+const { title, date } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title} | The Tomorrow Times</title>
+  <meta name="description" content="Today's news from one year in the future">
+</head>
+<body>
+  <slot />
+  
+  <footer class="site-footer">
+    <p>
+      <strong>The Tomorrow Times</strong> &mdash; Today's news, one year early
+    </p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+      All predictions are speculative. This is a simulation, not financial or political advice.
+    </p>
+  </footer>
+</body>
+</html>

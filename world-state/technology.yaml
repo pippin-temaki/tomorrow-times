@@ -1,0 +1,259 @@
+# Technology - World State Seed (Feb 2026)
+# Source: Real-world data and trends as of 2026-02-14
+
+ai:
+  frontier_models:
+    - name: "GPT-5.1"
+      organization: "OpenAI"
+      released: "2025-Q4"
+      capabilities:
+        - "Advanced reasoning and planning"
+        - "Multimodal (text, image, audio, video)"
+        - "Extended context (500K+ tokens)"
+        - "Improved coding (70%+ SWE-bench)"
+      parameters_estimate: "1T+"
+      notable: "Current reasoning leader"
+    
+    - name: "Claude Opus 4.5"
+      organization: "Anthropic"
+      released: "2026-02"
+      capabilities:
+        - "Strong reasoning and safety"
+        - "200K context window"
+        - "Extended thinking modes"
+        - "Constitutional AI v3"
+      notable: "Safety-focused, competitive performance"
+    
+    - name: "Gemini 3 Pro"
+      organization: "Google DeepMind"
+      released: "2025-12"
+      capabilities:
+        - "1M context window"
+        - "Native multimodal (video processing)"
+        - "24-language voice input"
+        - "74%+ SWE-bench"
+      notable: "Best multimodal capabilities, longest context"
+    
+    - name: "Grok 4"
+      organization: "xAI"
+      released: "2026-01"
+      capabilities:
+        - "Real-time X/Twitter integration"
+        - "Uncensored outputs"
+        - "Competitive reasoning"
+      notable: "Musk-backed, controversial positioning"
+    
+    - name: "Llama 4"
+      organization: "Meta"
+      released: "2026-01"
+      capabilities:
+        - "Open weights"
+        - "405B parameters"
+        - "Strong multilingual"
+      notable: "Leading open model, widely adopted"
+  
+  agent_systems:
+    status: "early_deployment"
+    capabilities:
+      - "Simple task automation"
+      - "Tool use and API integration"
+      - "Multi-step planning (limited)"
+    challenges:
+      - "Reliability and hallucination"
+      - "Safety and alignment"
+      - "Real-world deployment complexity"
+    key_players: ["OpenAI", "Anthropic", "Google", "Microsoft", "startups"]
+  
+  regulation:
+    us:
+      status: "fragmented_state_level"
+      federal_activity: "bills_proposed_not_passed"
+      key_issues: ["copyright", "transparency", "safety", "bias"]
+      outlook: "increased_scrutiny_2026"
+    
+    eu:
+      status: "AI_Act_in_force"
+      enacted: "2024"
+      enforcement_phase: "ramping_up"
+      key_requirements: ["high_risk_systems", "transparency", "bans_on_certain_uses"]
+      impact: "compliance_burden_for_US_companies"
+    
+    china:
+      status: "strict_controls"
+      approach: "security_and_content_control"
+      key_policies: ["algorithm_registration", "content_moderation", "data_localization"]
+    
+    uk:
+      status: "light_touch_pro_innovation"
+      approach: "sector_specific_regulation"
+  
+  adoption_trend: "accelerating"
+  enterprise_adoption: 0.65  # ~65% of enterprises using AI in some form
+  consumer_awareness: 0.85
+  
+  investment:
+    global_ai_investment_billion: 250
+    trend: "sustained_high_growth"
+    focus_areas: ["enterprise_AI", "agents", "infrastructure", "safety"]
+
+space:
+  missions:
+    - organization: "SpaceX"
+      program: "Starship"
+      status: "testing_flights"
+      progress: "successful_orbital_tests_2025"
+      timeline: "Mars_mission_planning_late_2020s"
+    
+    - organization: "NASA"
+      program: "Artemis"
+      status: "active"
+      recent: "Artemis_2_lunar_flyby_planned_2026"
+      goal: "Moon_landing_Artemis_3_2027"
+    
+    - organization: "Blue Origin"
+      program: "New Glenn"
+      status: "development"
+      progress: "first_flight_expected_2026"
+    
+    - organization: "China (CNSA)"
+      program: "Tiangong Space Station"
+      status: "operational"
+      recent: "expanding_international_cooperation"
+      goal: "lunar_base_by_2030s"
+  
+  commercial:
+    satellite_internet:
+      starlink_subscribers_million: 4.5
+      competitors: ["OneWeb", "Kuiper", "China_systems"]
+      status: "rapid_growth"
+    
+    space_tourism:
+      status: "niche_but_growing"
+      providers: ["Blue_Origin", "Virgin_Galactic", "SpaceX"]
+
+energy:
+  renewables:
+    global_share: 0.32  # ~32% of electricity generation
+    trend: "accelerating_deployment"
+    
+    solar:
+      status: "cost_leader"
+      trend: "explosive_growth"
+      key_developments: ["perovskite_tandem_cells", "efficiency_gains"]
+    
+    wind:
+      status: "mature_technology"
+      offshore_growth: "strong"
+    
+    nuclear:
+      status: "renaissance_beginning"
+      smr_development: "advancing"
+      fusion:
+        status: "research_progress"
+        breakthrough_watch: "ITER, NIF_followup, private_ventures"
+  
+  batteries:
+    ev_battery_cost_kwh: 95  # USD per kWh
+    trend: "continuing_cost_decline"
+    chemistry_developments:
+      - "Solid-state batteries in pilot production"
+      - "Sodium-ion commercializing"
+      - "Silicon anode improvements"
+  
+  grid_modernization:
+    status: "critical_need"
+    challenges: ["transmission_buildout", "storage_integration", "grid_stability"]
+
+computing:
+  quantum:
+    status: "noisy_intermediate_scale"
+    qubit_counts:
+      ibm: 1121  # IBM Condor
+      google: 105  # Willow chip with error correction
+      ionq: 64
+    breakthrough_2025: "Google error correction milestone"
+    commercial_applications: "limited_to_research"
+    timeline_to_advantage: "5-10_years_for_practical_use"
+  
+  semiconductors:
+    leading_nodes: ["3nm_production", "2nm_development"]
+    key_players: ["TSMC", "Samsung", "Intel"]
+    geopolitics: "US_China_decoupling_intensifying"
+    challenges:
+      - "Export controls on advanced chips to China"
+      - "Supply chain resilience"
+      - "Fab construction costs"
+    
+    ai_chips:
+      leaders: ["Nvidia", "AMD", "Intel", "Google_TPU", "startups"]
+      demand: "exceeding_supply"
+      trend: "specialized_accelerators_proliferating"
+
+biotech:
+  crispr:
+    status: "clinical_applications_expanding"
+    recent: "first_approved_sickle_cell_cure_2023"
+    pipeline: "cancer_therapies_advancing"
+  
+  mrna_vaccines:
+    status: "platform_proven"
+    applications: ["cancer_vaccines_in_trials", "universal_flu", "HIV_research"]
+  
+  longevity:
+    research_activity: "high"
+    investment: "growing"
+    key_areas: ["senolytics", "epigenetic_reprogramming", "NAD+_boosters"]
+    clinical_progress: "early_stage"
+
+consumer_tech:
+  vr_ar:
+    apple_vision_pro: "gen_2_expected_2026"
+    meta_quest: "quest_4_shipping"
+    adoption: "slow_but_growing"
+    applications: ["gaming", "enterprise_training", "design"]
+  
+  smartphones:
+    trend: "maturity_with_AI_features"
+    key_developments:
+      - "On-device AI processing"
+      - "Improved cameras via computational photography"
+      - "Foldables gaining share"
+  
+  autonomous_vehicles:
+    waymo: "operating_robotaxis_SF_Phoenix_LA"
+    tesla_fsd: "supervised_autonomy_improving"
+    cruise: "rebuilding_after_2023_incident"
+    regulation: "patchwork_state_by_state"
+    timeline_to_widespread: "still_5+_years"
+
+cybersecurity:
+  threat_landscape: "intensifying"
+  key_threats:
+    - "AI-powered attacks"
+    - "Ransomware evolution"
+    - "State-sponsored operations"
+    - "Supply chain vulnerabilities"
+  
+  quantum_threat:
+    status: "prepare_now_threat_later"
+    post_quantum_crypto: "standards_published_NIST_migration_beginning"
+
+internet:
+  social_media:
+    platforms:
+      - name: "X/Twitter"
+        status: "controversial_under_Musk"
+        trajectory: "turbulent"
+      - name: "TikTok"
+        status: "US_ban_threat_recurring"
+        trajectory: "uncertain_in_US"
+      - name: "Meta_platforms"
+        status: "stable_mature"
+      - name: "LinkedIn"
+        status: "professional_standard"
+  
+  content_creation:
+    ai_generated_content: "proliferating"
+    detection_tools: "improving_but_lagging"
+    platform_policies: "evolving"
+    copyright_battles: "intensifying"

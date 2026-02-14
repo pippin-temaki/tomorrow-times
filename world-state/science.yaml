@@ -1,0 +1,226 @@
+# Science - World State Seed (Feb 2026)
+# Source: Real-world data and research trends as of 2026-02-14
+
+climate:
+  global_temperature:
+    anomaly_celsius: 1.48  # Above pre-industrial baseline (2023 was ~1.45-1.48°C)
+    trend: "continuing_rise"
+    projection_2030: "1.5-1.7°C likely"
+  
+  extreme_events_recent:
+    - type: "heatwaves"
+      regions: ["Southern_Europe_2025", "South_Asia", "US_Southwest"]
+      severity: "record_breaking"
+    
+    - type: "flooding"
+      regions: ["East_Africa", "Pakistan_recurring", "China"]
+    
+    - type: "droughts"
+      regions: ["Amazon", "Mediterranean", "Western_US"]
+    
+    - type: "hurricanes"
+      note: "2025 Atlantic season very active"
+    
+    - type: "wildfires"
+      regions: ["Canada", "Greece", "California", "Australia"]
+  
+  sea_level_rise:
+    current_cm_above_baseline: 10  # Roughly 10cm above 1993 baseline
+    rate_mm_per_year: 4.5
+    coastal_cities_at_risk: ["Miami", "Jakarta", "Dhaka", "Lagos", "Shanghai"]
+  
+  carbon_emissions:
+    global_gigatons_co2: 37.5  # Roughly flat from 2024
+    trend: "plateauing_not_declining_fast_enough"
+    paris_agreement_gap: "significant"
+  
+  climate_policy:
+    - region: "EU"
+      status: "Green Deal implementation ongoing"
+      target: "55% reduction by 2030"
+    
+    - region: "US"
+      status: "uncertain under Trump 2.0"
+      risk: "IRA rollback attempts, Paris withdrawal again"
+    
+    - region: "China"
+      status: "renewables buildout massive, but coal still growing"
+      target: "carbon peak by 2030"
+  
+  tipping_points:
+    concerns:
+      - "AMOC (Atlantic current) weakening"
+      - "Amazon rainforest dieback risk"
+      - "Antarctic ice sheet stability"
+      - "Permafrost methane release"
+    status: "early warning signs, not crossed yet (probably)"
+
+health:
+  pandemics:
+    covid_19:
+      status: "endemic"
+      variants: "ongoing evolution"
+      public_health: "surveillance continues, fatigue high"
+    
+    mpox:
+      status: "controlled but recurring outbreaks"
+    
+    avian_flu:
+      status: "watch_closely"
+      risk: "H5N1 in mammals raises pandemic potential"
+  
+  treatments_recent:
+    - disease: "Sickle cell disease"
+      breakthrough: "CRISPR cure approved 2023"
+      status: "rolling out, expensive"
+    
+    - disease: "Alzheimer's"
+      development: "Lecanemab, donanemab showing modest benefit"
+      status: "first disease-modifying drugs approved"
+    
+    - disease: "Obesity"
+      breakthrough: "GLP-1 agonists (Ozempic, Wegovy, Mounjaro, Zepbound)"
+      status: "transformative impact on diabetes, obesity, possibly more"
+      concerns: ["cost", "access", "long_term_unknowns"]
+    
+    - disease: "HIV"
+      progress: "Long-acting injectables, broadly neutralizing antibodies"
+      status: "moving toward functional cure research"
+  
+  longevity_research:
+    status: "accelerating_investment"
+    key_areas:
+      - "Cellular reprogramming (Yamanaka factors)"
+      - "Senolytics (clearing zombie cells)"
+      - "NAD+ restoration"
+      - "Metformin, rapamycin studies"
+    companies: ["Altos Labs", "Calico", "Retro Biosciences"]
+    timeline_to_impact: "unclear, likely 10+ years for meaningful results"
+  
+  mental_health:
+    crisis_level: "high, especially Gen Z"
+    treatments:
+      - "Psychedelic therapy (psilocybin, MDMA) advancing FDA trials"
+      - "Ketamine clinics proliferating"
+      - "Digital mental health apps"
+    challenges: ["access", "therapist_shortage", "insurance_coverage"]
+
+physics:
+  particle_physics:
+    lhc:
+      status: "Run 3 ongoing at CERN"
+      searches: "beyond Standard Model (no major breakthroughs yet)"
+    
+    future_colliders:
+      status: "planning phase"
+      proposals: ["FCC in Europe", "ILC in Japan", "CEPC in China"]
+  
+  fusion_energy:
+    progress:
+      - facility: "NIF (National Ignition Facility)"
+        achievement: "fusion ignition achieved Dec 2022"
+        status: "repeating results, scaling challenges remain"
+      
+      - facility: "ITER"
+        status: "construction in France, first plasma target ~2035"
+      
+      - companies: ["Commonwealth Fusion (MIT spinout)", "Helion", "TAE"]
+        status: "private ventures racing, billions invested"
+    
+    timeline_to_grid: "still decades away (best case 2040s)"
+  
+  quantum_mechanics:
+    applications:
+      - "Quantum computing (see technology.yaml)"
+      - "Quantum communication (China leading)"
+      - "Quantum sensing and metrology"
+
+astronomy:
+  james_webb_telescope:
+    status: "operational, transformative discoveries"
+    recent_finds:
+      - "Earliest galaxies in universe"
+      - "Atmospheric signatures on exoplanets"
+      - "Detailed nebula and star formation imaging"
+  
+  exoplanets:
+    confirmed_count: 5600+
+    trends: "characterizing atmospheres, searching for biosignatures"
+  
+  gravitational_waves:
+    detections: "routine now (LIGO, Virgo, KAGRA)"
+    science: "black hole and neutron star mergers revealing new physics"
+  
+  black_holes:
+    eht: "Event Horizon Telescope imaging more black holes"
+    recent: "Sagittarius A* image, M87 follow-ups"
+
+biology:
+  synthetic_biology:
+    status: "rapid advancement"
+    applications:
+      - "Engineered microbes for biomanufacturing"
+      - "Xenobots (living robots from frog cells)"
+      - "Genetic circuits and biocomputers"
+    
+  brain_science:
+    brain_computer_interfaces:
+      - company: "Neuralink (Musk)"
+        status: "human trials started 2024"
+        progress: "early patients controlling devices"
+      
+      - company: "Synchron"
+        status: "less invasive approach, FDA trials"
+    
+    brain_mapping:
+      - project: "BRAIN Initiative, Human Connectome"
+        status: "ongoing, incremental progress"
+  
+  microbiome:
+    research: "exploding"
+    links_found: ["gut-brain axis", "mental health", "immune system", "obesity"]
+    treatments: "FMT (fecal transplants), engineered probiotics"
+
+space_science:
+  moon:
+    artemis: "preparing for crewed missions (see technology.yaml)"
+    interest: "water ice at poles, potential base"
+  
+  mars:
+    rovers: "Perseverance collecting samples"
+    sample_return: "mission planning (NASA-ESA)"
+    human_missions: "SpaceX aiming late 2020s (ambitious)"
+  
+  asteroids:
+    missions:
+      - "OSIRIS-REx returned samples"
+      - "DART impacted asteroid (planetary defense test success)"
+    
+    mining: "still science fiction, companies forming but far future"
+  
+  search_for_life:
+    seti: "ongoing radio searches, no confirmed signals"
+    biosignatures: "JWST searching exoplanet atmospheres"
+    venus: "phosphine detection debated"
+    europa_clipper: "launching to Jupiter's moon (potential subsurface ocean)"
+
+ocean_science:
+  deep_sea_exploration:
+    status: "less than 20% of ocean floor mapped"
+    recent: "new species discoveries continuing"
+  
+  coral_reefs:
+    status: "severe_bleaching_events_increasing"
+    outlook: "grim without rapid climate action"
+  
+  plastic_pollution:
+    severity: "worsening"
+    great_pacific_garbage_patch: "growing"
+    microplastics: "found everywhere (blood, placenta, arctic ice)"
+
+general_trends:
+  - "Interdisciplinary research accelerating"
+  - "AI as scientific tool (AlphaFold for protein folding, etc.)"
+  - "Open science movement growing"
+  - "Reproducibility crisis awareness"
+  - "Science communication vs misinformation battles"

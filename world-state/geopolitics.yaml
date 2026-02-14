@@ -1,0 +1,172 @@
+# Geopolitics - World State Seed (Feb 2026)
+# Source: Real-world data as of 2026-02-14
+
+leaders:
+  US:
+    head_of_state: "Donald Trump"
+    title: "President"
+    party: "Republican"
+    term_start: "2025-01-20"
+    term_end: "2029-01-20"
+    approval_rating: 0.42
+    key_policies: ["immigration_enforcement", "tariffs", "NATO_pressure", "Ukraine_policy_shift"]
+  
+  France:
+    head_of_state: "Emmanuel Macron"
+    title: "President"
+    term_start: "2022-05-14"
+    term_end: "2027-05-14"
+    approval_rating: 0.31
+    key_policies: ["EU_strategic_autonomy", "defense_buildup", "tech_sovereignty"]
+  
+  Germany:
+    head_of_state: "Frank-Walter Steinmeier"
+    head_of_government: "TBD"  # Election cycle Feb 2026
+    title: "Chancellor"
+    approval_rating: 0.35
+    key_policies: ["Ukraine_support", "defense_spending_increase", "green_transition"]
+  
+  UK:
+    head_of_state: "King Charles III"
+    head_of_government: "Keir Starmer"
+    title: "Prime Minister"
+    party: "Labour"
+    term_start: "2024-07-05"
+    approval_rating: 0.38
+    key_policies: ["NHS_reform", "EU_relations_rebuild", "climate_targets"]
+  
+  China:
+    head_of_state: "Xi Jinping"
+    title: "President / General Secretary"
+    tenure_start: "2012-11-15"
+    key_policies: ["tech_self_sufficiency", "Taiwan_reunification_pressure", "belt_and_road_expansion"]
+  
+  Russia:
+    head_of_state: "Vladimir Putin"
+    title: "President"
+    tenure_start: "2012-05-07"  # Current continuous term
+    key_policies: ["Ukraine_war", "NATO_confrontation", "Eurasian_integration"]
+  
+  Ukraine:
+    head_of_state: "Volodymyr Zelenskyy"
+    title: "President"
+    term_start: "2019-05-20"
+    wartime_status: true
+    key_policies: ["territorial_integrity", "NATO_membership", "EU_accession"]
+  
+  Israel:
+    head_of_government: "Benjamin Netanyahu"
+    title: "Prime Minister"
+    coalition: "right_wing"
+    key_policies: ["Gaza_security", "West_Bank_settlements", "Iran_containment"]
+
+conflicts:
+  - id: "ukraine-russia-war"
+    status: "active"
+    started: "2022-02-24"
+    parties: ["Russia", "Ukraine"]
+    supporters:
+      ukraine: ["US", "EU", "UK", "NATO"]
+      russia: ["Belarus", "Iran", "North_Korea"]
+    current_phase: "grinding_attrition"
+    frontline_status: "relatively_static"
+    recent_developments:
+      - "US aid package uncertainty under Trump administration"
+      - "European defense production ramping up"
+      - "Diplomatic efforts ongoing but stalled"
+    casualty_estimates:
+      ukraine: "high"
+      russia: "very_high"
+  
+  - id: "gaza-conflict"
+    status: "fragile_ceasefire"
+    recent_phase_started: "2023-10-07"
+    parties: ["Israel", "Hamas", "Palestinian_factions"]
+    current_phase: "post_major_operation_ceasefire"
+    recent_developments:
+      - "Ceasefire holding but fragile"
+      - "Humanitarian situation catastrophic"
+      - "Reconstruction discussions ongoing"
+      - "Regional tensions remain high"
+  
+  - id: "sudan-civil-war"
+    status: "active"
+    started: "2023-04-15"
+    parties: ["SAF", "RSF"]
+    current_phase: "ongoing_fighting"
+    humanitarian_crisis: "severe"
+  
+  - id: "myanmar-civil-war"
+    status: "active"
+    started: "2021-02-01"
+    parties: ["Military_junta", "resistance_forces"]
+    current_phase: "multi_front_conflict"
+
+alliances:
+  - name: "NATO"
+    members: 32
+    status: "strain_under_Trump_pressure"
+    key_tensions:
+      - "US demanding higher defense spending"
+      - "European strategic autonomy debate"
+      - "Ukraine membership question"
+    recent_developments:
+      - "Members increasing defense budgets"
+      - "Trump questioning Article 5 commitment"
+  
+  - name: "EU"
+    members: 27
+    status: "cohesion_under_pressure"
+    key_initiatives:
+      - "Defense industrial strategy"
+      - "Strategic autonomy push"
+      - "Ukraine support coordination"
+  
+  - name: "AUKUS"
+    members: ["Australia", "UK", "US"]
+    status: "active"
+    focus: "Indo-Pacific security, submarine technology"
+
+sanctions:
+  - target: "Russia"
+    imposed_by: ["US", "EU", "UK", "allies"]
+    scope: "comprehensive"
+    status: "ongoing_since_2022"
+    effectiveness: "mixed"
+  
+  - target: "Iran"
+    imposed_by: ["US"]
+    scope: "extensive"
+    status: "ongoing"
+    recent_changes: "enforcement_intensifying"
+
+elections_upcoming:
+  - country: "Germany"
+    type: "Federal election"
+    scheduled: "2026-02-23"
+    frontrunners: ["CDU/CSU", "SPD", "Greens"]
+    significance: "high"
+  
+  - country: "US"
+    type: "Midterm elections"
+    scheduled: "2026-11-03"
+    stakes: "Congressional control"
+
+diplomatic_flashpoints:
+  - region: "Taiwan_Strait"
+    risk_level: "high"
+    recent_incidents:
+      - "Increased PLA exercises around Taiwan"
+      - "US arms sales to Taiwan"
+    
+  - region: "South_China_Sea"
+    risk_level: "medium-high"
+    recent_incidents:
+      - "Maritime boundary disputes"
+      - "Freedom of navigation operations"
+  
+  - region: "Korean_Peninsula"
+    risk_level: "medium"
+    recent_incidents:
+      - "North Korea weapons development continues"
+      - "Military exercises by US-ROK alliance"

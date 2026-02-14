@@ -1,0 +1,198 @@
+# Narrative Arcs - Story Threads for The Tomorrow Times
+# These are ongoing storylines that will unfold over multiple editions
+# Each arc has beats/milestones and a projected trajectory
+
+active_arcs:
+  - id: "ai-regulation-showdown"
+    title: "The Great AI Regulation Showdown"
+    domain: "technology/politics"
+    status: "building"
+    started: "2027-02-14"
+    tension_level: 0.7  # 0-1 scale
+    
+    summary: "As AI capabilities surge past human-level on many tasks, the regulatory battle intensifies. EU's AI Act is being enforced, the US remains fragmented, and tech giants are lobbying hard while safety advocates push for stricter controls."
+    
+    key_actors:
+      - "US Congress (bills pending)"
+      - "EU Commission (enforcement)"
+      - "Tech CEOs (OpenAI, Google, Meta, Anthropic)"
+      - "AI safety advocates (Center for AI Safety, Future of Life Institute)"
+      - "China (watching, regulating domestically)"
+    
+    projected_beats:
+      - date: "2027-03"
+        event: "Major AI incident (deepfake election interference or safety failure)"
+      - date: "2027-04"
+        event: "Emergency congressional hearings"
+      - date: "2027-06"
+        event: "First major AI bill passes committee"
+      - date: "2027-09"
+        event: "International AI safety summit"
+    
+    projected_resolution: "2027-Q4"
+    outcomes_possible:
+      - "Comprehensive US federal AI regulation passes"
+      - "Status quo with state-level patchwork"
+      - "International treaty on AI safety"
+  
+  - id: "ukraine-endgame"
+    title: "Ukraine War: Searching for an Endgame"
+    domain: "geopolitics"
+    status: "active"
+    started: "2027-02-14"
+    tension_level: 0.85
+    
+    summary: "Three years into the war, Trump's return to power creates uncertainty about US support. Europe steps up but faces its own political headwinds. Both sides are exhausted but no clear path to peace."
+    
+    key_actors:
+      - "Trump administration (pressure for deal)"
+      - "Zelenskyy (defending territorial integrity)"
+      - "Putin (waiting out Western resolve)"
+      - "European leaders (Macron, next German chancellor)"
+      - "NATO alliance (under strain)"
+    
+    projected_beats:
+      - date: "2027-03"
+        event: "Trump proposes ceasefire plan, Ukraine resists"
+      - date: "2027-05"
+        event: "European-led peace initiative"
+      - date: "2027-07"
+        event: "Major summer offensive (by one side or the other)"
+      - date: "2027-09"
+        event: "UN General Assembly showdown on Ukraine"
+    
+    projected_resolution: "2027-late or 2028"
+    outcomes_possible:
+      - "Frozen conflict (Korea-style armistice)"
+      - "Negotiated settlement with territorial concessions"
+      - "Continued grinding war"
+  
+  - id: "mars-race-heats-up"
+    title: "The New Space Race: Mars or Bust"
+    domain: "space/technology"
+    status: "building"
+    started: "2027-02-14"
+    tension_level: 0.5
+    
+    summary: "SpaceX's Starship tests succeed, NASA's Artemis program progresses toward the Moon, and China announces ambitious plans. The race to Mars is becoming real, not just sci-fi."
+    
+    key_actors:
+      - "Elon Musk / SpaceX"
+      - "NASA"
+      - "China National Space Administration"
+      - "Blue Origin (Bezos)"
+      - "International partnerships"
+    
+    projected_beats:
+      - date: "2027-04"
+        event: "Starship first orbital refueling test"
+      - date: "2027-08"
+        event: "Artemis 2 lunar flyby (crewed)"
+      - date: "2027-10"
+        event: "China announces detailed Mars mission timeline"
+      - date: "2027-12"
+        event: "SpaceX announces Mars cargo mission target date"
+    
+    projected_resolution: "multi_year (2028-2030)"
+    outcomes_possible:
+      - "SpaceX launches first Mars cargo mission by 2029"
+      - "International collaboration emerges"
+      - "New space race between US and China"
+  
+  - id: "climate-tipping-points"
+    title: "Climate Crisis: Approaching Tipping Points"
+    domain: "climate/science"
+    status: "active"
+    tension_level: 0.9
+    
+    summary: "With temperatures nearing 1.5°C, extreme weather events escalate, and scientists warn some climate tipping points may be approaching. Political will remains insufficient."
+    
+    key_actors:
+      - "IPCC scientists"
+      - "Climate activists (Greta generation + new wave)"
+      - "Fossil fuel industry (fighting rearguard action)"
+      - "Green tech companies"
+      - "Governments (mixed bag)"
+    
+    projected_beats:
+      - date: "2027-03"
+        event: "Devastating heatwave/flood/hurricane season begins early"
+      - date: "2027-06"
+        event: "Major climate report warns of tipping point proximity"
+      - date: "2027-09"
+        event: "COP climate summit (high stakes, low expectations)"
+      - date: "2027-11"
+        event: "Insurance industry crisis as climate damages mount"
+    
+    projected_resolution: "ongoing (multi-decade crisis)"
+    outcomes_possible:
+      - "Acceleration of green transition (crisis forces action)"
+      - "Continued inadequate response"
+      - "First major tipping point crossed (AMOC, Amazon, ice sheets)"
+  
+  - id: "us-political-polarization"
+    title: "America's Cold Civil War"
+    domain: "politics/us"
+    status: "active"
+    started: "2027-02-14"
+    tension_level: 0.8
+    
+    summary: "Trump's second term deepens America's divides. Institutions under stress, political violence concerns, and state vs federal conflicts intensify."
+    
+    key_actors:
+      - "Trump administration"
+      - "Democratic opposition (leadership unclear)"
+      - "Supreme Court (conservative supermajority)"
+      - "State governors (blue state resistance)"
+      - "Media ecosystem (fragmented reality)"
+    
+    projected_beats:
+      - date: "2027-03"
+        event: "Major federal vs state clash (immigration, rights)"
+      - date: "2027-05"
+        event: "Supreme Court controversial rulings"
+      - date: "2027-08"
+        event: "Political violence incident shocks nation"
+      - date: "2027-11"
+        event: "Midterm election campaigns begin (2026 midterms)"
+    
+    projected_resolution: "2026 midterms (Nov) will be critical test"
+    outcomes_possible:
+      - "Democrats retake Congress, check on Trump"
+      - "Republicans hold, Trump emboldened"
+      - "Constitutional crisis over election disputes"
+
+building_arcs:
+  - id: "ai-agents-economy"
+    title: "The Agent Economy Arrives"
+    domain: "technology/economy"
+    status: "early_stage"
+    
+    summary: "AI agents move from demos to deployment. First wave of job displacement begins, economic implications unclear but significant."
+    
+  - id: "longevity-breakthrough"
+    title: "The Longevity Breakthrough Race"
+    domain: "science/health"
+    status: "research_phase"
+    
+    summary: "Billions pour into longevity research. Will we see the first genuine anti-aging therapy, or is it still decades away?"
+
+  - id: "quantum-supremacy-race"
+    title: "Quantum Computing: From Lab to Reality"
+    domain: "technology/computing"
+    status: "early_stage"
+    
+    summary: "Google's error correction breakthrough reignites the quantum race. Can quantum advantage arrive in useful applications?"
+
+resolved_arcs: []
+# Will populate as arcs conclude
+
+arc_management_notes: |
+  - Active arcs should drive 40-60% of front-page stories
+  - Building arcs get occasional coverage (1-2x per week)
+  - When arc resolves, do a major "The Story So Far" recap
+  - Aim for 3-5 active arcs at any time
+  - Rotate in new arcs as old ones resolve
+  - Arcs can be domestic, international, scientific, cultural
+  - High tension arcs get more coverage
+  - Connect arcs when logical (e.g., AI regulation affects AI agent economy)
