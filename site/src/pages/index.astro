@@ -1,17 +1,44 @@
 ---
+import { getCollection } from 'astro:content';
 import Newspaper from '../layouts/Newspaper.astro';
 import Masthead from '../components/Masthead.astro';
 import Article from '../components/Article.astro';
 import Ticker from '../components/Ticker.astro';
 
-const editionDate = "Saturday, February 14, 2027";
+// Get today's edition (Feb 15, 2027 in future timeline)
+const editionDate = "Saturday, February 15, 2027";
+const editionSlug = "2027-02-15";
+
+// Fetch all articles from this edition
+const allArticles = await getCollection('editions');
+const editionArticles = allArticles.filter(article => 
+  article.id.startsWith(editionSlug)
+);
+
+// Organize articles by section
+const frontPage = editionArticles.find(a => a.data.section === 'front-page');
+const world = editionArticles.find(a => a.data.section === 'world');
+const tech = editionArticles.find(a => a.data.section === 'tech');
+const business = editionArticles.find(a => a.data.section === 'business');
+const culture = editionArticles.find(a => a.data.section === 'culture');
+const opinion = editionArticles.find(a => a.data.section === 'opinion');
+
+// Render article content
+const frontPageContent = frontPage ? await frontPage.render() : null;
+const worldContent = world ? await world.render() : null;
+const techContent = tech ? await tech.render() : null;
+const businessContent = business ? await business.render() : null;
+const cultureContent = culture ? await culture.render() : null;
+const opinionContent = opinion ? await opinion.render() : null;
 
 const tickerItems = [
-  { text: "S&P 500 closes at 6,847 (+3.2% this week)" },
-  { text: "Bitcoin reaches $127,000 amid institutional buying surge" },
-  { text: "Record heatwave hits Southern Europe, temperatures exceed 45°C" },
-  { text: "NASA confirms Artemis 2 crew completes lunar orbit successfully" },
-  { text: "Federal Reserve holds rates steady at 3.75% as inflation moderates" },
+  { text: "S&P 500 closes at 7,047 (+3.8% this week) as rate cut hopes surge" },
+  { text: "Bitcoin reaches $132,000 amid institutional buying and ETF inflows" },
+  { text: "Senate AI regulation bill clears committee 14-8, full vote expected March" },
+  { text: "Milano Cortina Winter Olympics face warmest temperatures on record" },
+  { text: "Google's quantum chip breaks RSA-2048, accelerating encryption crisis" },
+  { text: "Ukraine war enters fourth year with no diplomatic breakthrough in sight" },
+  { text: "Federal Reserve holds rates at 4.25%, Powell warns against premature easing" },
 ];
 ---
 
@@ -20,67 +47,17 @@ const tickerItems = [
   
   <div class="front-page">
     <div class="front-page-lead">
-      <Article 
-        headline="AI Regulation Passes Senate Committee in Landmark 14-8 Vote"
-        byline="Aria Chen, Technology Correspondent"
-        size="major"
-        confidence="high"
-        columns={2}
-      >
-        <p class="article-lede">
-          In a historic move that could reshape the artificial intelligence industry, the Senate Commerce Committee approved sweeping AI regulation legislation yesterday, setting up a full Senate vote expected within weeks.
-        </p>
-        
-        <p>
-          The Artificial Intelligence Safety and Transparency Act, crafted over eight months of contentious negotiations, would establish federal oversight of "frontier AI systems"—models with capabilities exceeding current benchmarks in reasoning, planning, or autonomous operation.
-        </p>
-        
-        <p>
-          "Today we take the first serious step toward ensuring AI serves humanity, not the other way around," said Sen. Maria Cortez (D-CA), the bill's primary sponsor. "This isn't about stifling innovation. It's about preventing catastrophe."
-        </p>
-        
-        <p>
-          The legislation mandates safety testing for advanced AI models before deployment, requires companies to report "critical capability thresholds" to a new AI Safety Board, and establishes criminal liability for executives who knowingly deploy unsafe systems.
-        </p>
-        
-        <p>
-          Tech industry response was predictably split. OpenAI and Anthropic, both of which employ teams focused on AI safety, issued cautious support. "We've long advocated for sensible regulation," said OpenAI CEO Sam Altman in a statement. "This framework, while imperfect, represents a workable compromise."
-        </p>
-        
-        <p>
-          But Meta and several prominent venture capitalists condemned the bill as "innovation-killing overreach." Marc Andreessen called it "the most dangerous piece of tech legislation since the Clipper Chip."
-        </p>
-      </Article>
-    </div>
-    
-    <div class="front-page-secondary">
-      <Article 
-        headline="Ukraine Peace Talks Stall as Trump Floats 'Two-State Solution'"
-        byline="James Okafor, World Affairs Editor"
-        size="secondary"
-        confidence="medium"
-      >
-        <p class="article-lede">
-          President Trump's proposal to partition Ukraine into Russian and Ukrainian-controlled zones drew immediate rejection from Kyiv and cautious skepticism from European allies.
-        </p>
-        
-        <p>
-          Speaking at Mar-a-Lago, Trump described the plan as "common sense" that would "end the killing immediately." But Ukrainian President Zelenskyy, in a terse statement, called any territorial concessions "unacceptable and illegal."
-        </p>
-      </Article>
-      
-      <hr class="rule" />
-      
-      <Article 
-        headline="'Ozempic Economy' Reshapes Food Industry as GLP-1 Use Soars"
-        byline="Sofia Martinez, Business & Markets"
-        size="standard"
-        confidence="high"
-      >
-        <p>
-          Major food conglomerates report declining snack sales as GLP-1 diabetes and weight-loss drugs reach 22 million U.S. users—triple the 2025 figure. "We're seeing a fundamental shift in consumer behavior," said PepsiCo CFO during earnings call.
-        </p>
-      </Article>
+      {frontPage && frontPageContent && (
+        <Article 
+          headline={frontPage.data.title}
+          byline={frontPage.data.author}
+          size={frontPage.data.size || 'major'}
+          confidence={frontPage.data.confidence}
+          columns={frontPage.data.columns || 2}
+        >
+          <frontPageContent.Content />
+        </Article>
+      )}
     </div>
   </div>
   
@@ -88,50 +65,75 @@ const tickerItems = [
   
   <hr class="rule rule-thick" />
   
+  <h2 class="section-header">World Affairs</h2>
+  
+  {world && worldContent && (
+    <Article 
+      headline={world.data.title}
+      byline={world.data.author}
+      size={world.data.size || 'secondary'}
+      confidence={world.data.confidence}
+    >
+      <worldContent.Content />
+    </Article>
+  )}
+  
+  <hr class="rule rule-thick" />
+  
   <h2 class="section-header">Technology & Science</h2>
   
-  <Article 
-    headline="Google's Quantum Breakthrough Sparks 'Encryption Doomsday' Fears"
-    byline="Aria Chen"
-    size="secondary"
-    confidence="medium"
-  >
-    <p class="article-lede">
-      Researchers at Google Quantum AI demonstrated a 500-qubit processor capable of breaking RSA-2048 encryption in laboratory conditions, accelerating the timeline for "Q-Day"—when current cryptographic standards become obsolete.
-    </p>
-    
-    <p>
-      While the system required highly controlled conditions and isn't yet practical for real-world attacks, cybersecurity experts warn that adversaries may already be harvesting encrypted data to decrypt later. "The countdown to quantum-enabled surveillance has begun," said Dr. Jennifer Wu of MIT.
-    </p>
-    
-    <p>
-      The National Institute of Standards and Technology has urged organizations to begin migrating to post-quantum cryptographic standards immediately, but adoption remains slow across industries.
-    </p>
-  </Article>
+  {tech && techContent && (
+    <Article 
+      headline={tech.data.title}
+      byline={tech.data.author}
+      size={tech.data.size || 'secondary'}
+      confidence={tech.data.confidence}
+    >
+      <techContent.Content />
+    </Article>
+  )}
   
-  <hr class="rule" />
+  <hr class="rule rule-thick" />
+  
+  <h2 class="section-header">Business & Markets</h2>
+  
+  {business && businessContent && (
+    <Article 
+      headline={business.data.title}
+      byline={business.data.author}
+      size={business.data.size || 'secondary'}
+      confidence={business.data.confidence}
+    >
+      <businessContent.Content />
+    </Article>
+  )}
+  
+  <hr class="rule rule-thick" />
+  
+  <h2 class="section-header">Culture & Sports</h2>
+  
+  {culture && cultureContent && (
+    <Article 
+      headline={culture.data.title}
+      byline={culture.data.author}
+      size={culture.data.size || 'standard'}
+      confidence={culture.data.confidence}
+    >
+      <cultureContent.Content />
+    </Article>
+  )}
+  
+  <hr class="rule rule-thick" />
   
   <h2 class="section-header">Opinion</h2>
   
-  <Article 
-    headline="The Editor: Why We're Probably Wrong (And That's the Point)"
-    byline="The Editorial Board"
-    size="standard"
-  >
-    <p class="article-lede">
-      This newspaper is an experiment in structured uncertainty. Every article you read today is a prediction about events one year from now—and most predictions, even expert ones, are wrong.
-    </p>
-    
-    <p>
-      Philip Tetlock's research on forecasting found that even domain experts perform only marginally better than random chance when predicting complex events. Superforecasters—the top 2% of predictors—achieve Brier scores around 0.20, far from perfect.
-    </p>
-    
-    <p>
-      So why do this? Because the exercise of structured forecasting forces clearer thinking about trends, causality, and uncertainty. A year from now, we'll publish our accuracy report. Some headlines will look prescient. Most will look silly. A few might be dangerously close.
-    </p>
-    
-    <p>
-      We invite you to hold us accountable. This is journalism from the future, but the reckoning happens in the present.
-    </p>
-  </Article>
+  {opinion && opinionContent && (
+    <Article 
+      headline={opinion.data.title}
+      byline={opinion.data.author}
+      size={opinion.data.size || 'standard'}
+    >
+      <opinionContent.Content />
+    </Article>
+  )}
 </Newspaper>
